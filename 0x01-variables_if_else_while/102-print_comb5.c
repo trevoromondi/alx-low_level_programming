@@ -1,47 +1,45 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
  * main - prints all possible combinations of two-digit numbers
  * Return: 0
  */
 int main(void)
 {
+	int a =0;
+	int b;
 	int c;
 	int d;
 	int e;
-	int f = 0;
+	int f;
 
-	while (f < 10)
+	while (a <= 98)
 	{
-		e = 0;
-		while (e < 10)
+		b = (a / 10 + '0');
+		c = (a % 10 + '0');
+		d = 0;
+
+		while (d <= 99)
 		{
-			d = 0;
-			while (d < 10)
+			e = (d / 10 + '0');
+			f = (d % 10 + '0');
+
+			if (a < d)
 			{
-				c = 0;
-				while (c < 10)
+				putchar(b);
+				putchar(c);
+				putchar(' ');
+				putchar(e);
+				putchar(f);
+
+				if (a != 98)
 				{
-					if (!(f == c && e == d))
-					{
-						putchar('0' + f);
-						putchar('0' + e);
-						putchar(' ');
-						putchar('0' + d);
-						putchar('0' + c);
-						if (!(f + e == 18 && c + d == 17 && d == 9))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-					c++;
+					putchar(',');
+					putchar(' ');
 				}
-				d++;
 			}
-			e++;
+			d++;
 		}
-		f++;
+		a++;
 	}
 	putchar('\n');
 	return (0);
