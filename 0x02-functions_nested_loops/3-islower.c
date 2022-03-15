@@ -4,7 +4,7 @@
  * @x : character to test case
  * Return: 0 or 1
  */
-int _islower(int x)
+int _islower(int c)
 {
-	return (x >= 97 && x <= 122);
+	return (c >= 97 && c <= 122);
 }
