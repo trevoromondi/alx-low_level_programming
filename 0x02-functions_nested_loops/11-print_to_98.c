@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_to_98 - print all natura numbers from n to 98
- * @n number to test
+ * @n: number to test
  * Return: no return
  */
 void print_to_98(int n)
