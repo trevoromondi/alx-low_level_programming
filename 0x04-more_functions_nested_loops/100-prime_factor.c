@@ -6,16 +6,19 @@
  */
 int main(void)
 {
-	unsigned int long i = 612852475143, a = (int) sqrt(i);
+	long num = 612852475143;
+	long divisor = 2;
+	long large_prime = 0;
 
-	while (1)
+	while (num != 1)
 	{
-		if (i % a == 0)
+		if (num % divisor == 0)
 		{
-			printf("%lu \n", i / a);
-			break;
+			num = num / divisor;
+			large_prime = divisor;
 		}
-		a--;
+		divisor += 1;
 	}
+	printf("%ld\n", large_prime);
 	return (0);
 }
