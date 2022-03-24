@@ -16,7 +16,7 @@ char *rot13(char *r)
 	{
 		for (y = 0; y < 54; y++)
 		{
-			if (((r[x] <= 'z' && r[x] >= 'a') || (r[x] <= 'Z' && r[x] >= 'A')) && r[x] == i[y])
+			if (r[x] == i[y])
 			{
 				r[x] = o[y];
 				break;
