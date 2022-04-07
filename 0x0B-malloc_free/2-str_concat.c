@@ -10,6 +10,7 @@
 int _strlen(char *s)
 {
 	int size = 0;
+
 	for (; s[size] != '\0'; size++)
 		;
 	return (size);
@@ -33,7 +34,7 @@ char *str_concat(char *s1, char *s2)
 
 	sz1 = _strlen(s1);
 	sz2 = _strlen(s2);
-	m = malloc((sz1 + sz2) *sizeof(char) + 1);
+	m = malloc((sz1 + sz2) * sizeof(char) + 1);
 
 	if (m == 0)
 		return (0);
