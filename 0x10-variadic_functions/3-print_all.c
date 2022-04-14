@@ -40,6 +40,10 @@ void print_str(va_list list)
 	s == NULL ? printf("(nil)") : printf("%s", s);
 }
 
+/**
+ * print_all - prints any type
+ * @format: args to print
+ */
 void print_all(const char * const format, ...)
 {
 	va_list list;
